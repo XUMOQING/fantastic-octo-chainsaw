@@ -7,7 +7,13 @@ st.set_page_config(page_title="漂浮文字", layout="wide", initial_sidebar_sta
 st.markdown("""
     <style>
     .stApp {margin: 0; padding: 0;}
-    .float-text {position: absolute; color: pink; font-family: 楷体; font-size: 45px;}
+    .float-text {
+        position: absolute; 
+        color: #ff0080; /* 更鲜艳的粉色 */
+        font-family: 楷体; 
+        font-size: 45px;
+        font-weight: bold; /* 加粗文字 */
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -44,4 +50,5 @@ def float_text_html():
     return html_content
 
 # 渲染漂浮文字
+
 html(float_text_html(), height=800, width=1200)
